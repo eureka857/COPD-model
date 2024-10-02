@@ -44,7 +44,7 @@ def user_input_features():
     selected_option6 = st.sidebar.selectbox('活动后气促', list(options6.keys()))
     selected_option7 = st.sidebar.selectbox('发现影像上的肺气肿', list(options7.keys()))
     selected_option8 = st.sidebar.selectbox('吸烟指数', list(options8.keys()))
-    selected_option9 = st.sidebar.selectbox('使用煤、柴草或动物粪便等生物燃料超过5年', list(options9.keys()))
+    selected_option9 = st.sidebar.selectbox('过去一年中是否使用呼吸药物治疗', list(options9.keys()))
     
     # 获取原始参数值
     param1 = options1[selected_option1]
@@ -59,7 +59,7 @@ def user_input_features():
 
     # 根据你的模型输入特征添加更多的参数
     data = {'S': param1, 'A': param2, 'B': param3, 'CP': param4, 
-            'Wh': param5, 'mMRC3': param6, 'LD12': param7, 'Sidx': param8, 'Bio': param9 }
+            'Wh': param5, 'mMRC3': param6, 'LD12': param7, 'Sidx': param8, 'Drugu': param9 }
     features = pd.DataFrame(data, index=[0])
     return features
 
